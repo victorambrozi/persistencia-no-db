@@ -4,8 +4,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ConexaoDB {
+public class ConexaoDao {
   Connection connection;
+  ResultSet result;
+  PreparedStatement statement;
 
   public void open() throws Exception {
     String url = "jdbc:mysql://localhost:3306/cadastros";

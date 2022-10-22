@@ -7,9 +7,10 @@ import java.sql.SQLException;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        ConexaoDB con = new ConexaoDB();
+        FormsDao formDB = new FormsDao();
+        Contato joaoPaulo = new Contato(1, "João Paulo", "joaopaulo@formulario.com");
+        Contato duda = new Contato(2, "Eduarda", "duda@formulario.com");
+        formDB.incluir(duda);
 
-        con.open();
-        con.close();
     }
 }
